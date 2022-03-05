@@ -6,8 +6,8 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     int day = 1;
-    String name = "yash";
-    double pie = 3.14;
+    const String name = "yash";
+    const double pie = 3.14;
 
     return Scaffold(
       appBar: AppBar(
