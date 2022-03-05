@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/pages/home_page.dart';
 import 'package:flutter_catalog/pages/login_page.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   // main is a function
@@ -25,27 +26,35 @@ class MyApp extends StatelessWidget {
     //final //data can be modifies //ex: list can be modified on final but cannot modify in const
 
     return MaterialApp(
-      //home: HomePage(), //either routes or this to be in the program (both are not accepted)
+      // home:
+      //     HomePage(), //either routes or this to be in the program (both are not accepted)
       themeMode: ThemeMode.light,
-      theme: ThemeData(primarySwatch: Colors.amber),
+
+      theme: ThemeData(
+        primarySwatch: Colors.amber,
+        fontFamily: GoogleFonts.lato().fontFamily,
+        //primaryTextTheme: GoogleFonts.latoTextTheme()  //only applied to primary text
+      ),
+
       darkTheme: ThemeData(brightness: Brightness.dark),
 
-      //initialRoute: "/Login", //set default page to login page
+      //initialRoute: "/home", //set default page to login page
       routes: {
-        "/": (context) => HomePage(),
-        //"/home": (context) => HomePage(),
-        "/Login": (context) => LoginPage(),
+        // "/": (context) => HomePage(),
+        "/home": (context) => HomePage(),
+        //"/Login": (context) => LoginPage(),
+        "/": (context) => LoginPage(),
       },
     );
   }
 
-  bringVegetables({@required bool pishwi = false, int rupees = 100}) {
-    //@required makes it compulsary to say thaia is providing or not i.e true or false
-    //bringVegetables is a method
-    //function inside a class = method
+  //bringVegetables({@required bool pishwi = false, int rupees = 100}) {
+  //@required makes it compulsary to say thaia is providing or not i.e true or false
+  //bringVegetables is a method
+  //function inside a class = method
 
-    //take out cycle
+  //take out cycle
 
-    //go to market
-  }
+  //go to market
+  // }
 }
